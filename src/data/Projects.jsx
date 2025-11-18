@@ -7,8 +7,8 @@ export const projects = [
         desc: 'Top-down space shooter gemaakt in Unity. Focus op performantie (object pooling), snelle input en polished VFX.',
         details: 'Gebouwd met Unity 2021, C# en de built-in 2D renderer. Includes pooling, enemy waves, and simple AI.',
         screenshots: [
-            { src: 'https://via.placeholder.com/1200x675.png?text=Space+Shooter+1', alt: 'Space Shooter screenshot 1' },
-            { src: 'https://via.placeholder.com/1200x675.png?text=Space+Shooter+2', alt: 'Space Shooter screenshot 2' }
+            { src: '/assets/placeholder.png', alt: 'Space Shooter screenshot 1' },
+            { src: '/assets/placeholder.png', alt: 'Space Shooter screenshot 2' }
         ],
         highlights: [
             {
@@ -63,8 +63,8 @@ public void OnEnemyHit() {
         desc: 'Procedural room- and corridor generation met seedable RNG en weight-based room placement.',
         details: 'Perlin-noise en BSP-achtige partitioning gecombineerd voor snelle, variabele levels.',
         screenshots: [
-            { src: 'https://via.placeholder.com/1200x675.png?text=Dungeon+1', alt: 'Dungeon screenshot 1' },
-            { src: 'https://via.placeholder.com/1200x675.png?text=Dungeon+2', alt: 'Dungeon screenshot 2' }
+            { src: '/assets/placeholder.png', alt: 'Dungeon screenshot 1' },
+            { src: '/assets/placeholder.png', alt: 'Dungeon screenshot 2' }
         ],
         highlights: [
             {
@@ -103,8 +103,8 @@ if (!roomA.connected && !roomB.connected) {
         desc: 'Multiplayer demo met Photon PUN: matchmaking, state sync en client-side interpolation.',
         details: 'Gebruik van snapshot-smoothing en client prediction voor lage latency feel.',
         screenshots: [
-            { src: 'https://via.placeholder.com/1200x675.png?text=Multiplayer+1', alt: 'Multiplayer screenshot 1' },
-            { src: 'https://via.placeholder.com/1200x675.png?text=Multiplayer+2', alt: 'Multiplayer screenshot 2' }
+            { src: '/assets/placeholder.png', alt: 'Multiplayer screenshot 1' },
+            { src: '/assets/placeholder.png', alt: 'Multiplayer screenshot 2' }
         ],
         highlights: [
             {
@@ -151,8 +151,8 @@ public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info) {
         desc: 'High-fidelity landscape with procedural foliage placement and LOD.',
         details: 'Unreal Engine landscape tools, foliage tool, and runtime LOD tuning for performance.',
         screenshots: [
-            { src: 'https://via.placeholder.com/1200x675.png?text=Landscape+1', alt: 'Landscape screenshot 1' },
-            { src: 'https://via.placeholder.com/1200x675.png?text=Landscape+2', alt: 'Landscape screenshot 2' }
+            { src: '/assets/placeholder.png', alt: 'Landscape screenshot 1' },
+            { src: '/assets/placeholder.png', alt: 'Landscape screenshot 2' }
         ],
         highlights: [
             {
@@ -179,8 +179,7 @@ float3 ApplyWind(float3 pos, float time) {
         desc: 'Small platformer with physics puzzles, moving platforms and save states.',
         details: 'Built in Godot 3.5, modular scenes and reusable puzzle components.',
         screenshots: [
-            { src: 'https://via.placeholder.com/1200x675.png?text=Platformer+1', alt: 'Platformer screenshot 1' },
-            { src: 'https://via.placeholder.com/1200x675.png?text=Platformer+2', alt: 'Platformer screenshot 2' }
+           
         ],
         highlights: [
             {
