@@ -1,0 +1,58 @@
+import {Link} from 'react-router-dom'
+import { projects } from './src/data/projects'
+
+export default function Home({projects}) {
+  return (
+    <main className="flex-1 max-w-4xl mx-auto p-6">
+      <section className="mb-8">
+        <div className="rounded-xl p-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+          <h2 className="text-2xl font-bold">Latest project — Awesome App</h2>
+          <p className="mt-2 text-gray-200">Short hero blurb describing the problem you solved.</p>
+          <div className="mt-4 flex gap-3">
+            <Link to="/projects/proj-1" className="px-4 py-2 bg-white text-black rounded-md">View case study</Link>
+            <a className="px-4 py-2 border rounded-md" href="#">Live demo</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 className="text-xl font-semibold mb-4">Other projects</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map(p => (
+            <Link key={p.id} to={`/projects/${p.id}`} className="block p-4 border rounded-lg hover:shadow-md">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h4 className="font-medium">{p.title}</h4>
+                  <p className="text-sm text-gray-500">{p.desc}</p>
+                </div>
+                <span className="text-xs px-2 py-1 bg-gray-200 rounded">{p.tag}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  )
+}
+
+
+import { useParams, Link } from 'react-router-dom'
+
+export default function ProjectPage({ projects }) {
+    const { id } = useParams()
+    const project = projects.find(p => p.id === id)
+    if (!project) return <main className="flex-1 max-w-4xl mx-auto p-6">Project not found.</main>
+
+    return (
+        <main className="flex-1 max-w-4xl mx-auto p-6">
+            <article>
+                <h1 className="text-2xl font-bold mb-2">{project.title}</h1>
+                <p className="text-sm text-gray-500 mb-4">{project.tag}</p>
+                <p className="mb-6">{project.details}</p>
+                <div className="flex gap-3">
+                    <Link to="/" className="px-4 py-2 border rounded">Back</Link>
+                </div>
+            </article>
+        </main>
+    )
+}
